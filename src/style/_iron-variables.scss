@@ -1,6 +1,6 @@
 $grid-columns: 12;
 $container-max-width: 1480px;
-$container-gutter: 40px;
+$container-gutter: 30px;
 $grid-gutter: (0, 4, 8, 16, 24, 32, 40);
 
 $breakpoints: (
@@ -8,12 +8,4 @@ $breakpoints: (
   md: '(min-width: 481px) and (max-width: 767px)',
   lg: '(min-width: 768px) and (max-width: 1024px)',
   xl: '(min-width: 1025px)',
-);
-
-$flex: (
-  start: flex-start,
-  end: flex-end,
-  around: space-around,
-  between: space-between,
-  center: center,
 );

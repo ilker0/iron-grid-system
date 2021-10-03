@@ -1,3 +1,11 @@
+$flex: (
+  start: flex-start,
+  end: flex-end,
+  around: space-around,
+  between: space-between,
+  center: center,
+);
+
 .i-row {
   display: flex;
   box-sizing: border-box;
