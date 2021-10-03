@@ -84,6 +84,7 @@ if (!argv.format || argv.format === 'es') {
     },
     plugins: [
       scss({
+        prefix: `@import "../src/style/_iron-variables.scss";`,
         output: 'dist/style.css',
         outputStyle: 'compressed',
       }),
@@ -122,6 +123,7 @@ if (!argv.format || argv.format === 'cjs') {
     },
     plugins: [
       scss({
+        prefix: `@import "../src/style/_iron-variables.scss";`,
         output: 'dist/style.css',
         outputStyle: 'compressed',
       }),
@@ -149,6 +151,7 @@ if (!argv.format || argv.format === 'iife') {
     },
     plugins: [
       scss({
+        prefix: `@import "../src/style/_iron-variables.scss";`,
         output: 'dist/style.css',
         outputStyle: 'compressed',
       }),
