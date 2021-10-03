@@ -1,0 +1,28 @@
+.i-row {
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+
+  &::before,
+  &::after {
+    display: flex;
+  }
+}
+
+@each $flex-key in map-keys($flex) {
+  $flex-item: map-get($flex, $flex-key);
+
+  .justify {
+    &-#{$flex-key} {
+      justify-content: $flex-item;
+    }
+  }
+
+  .align {
+    &-#{$flex-key} {
+      align-items: $flex-item;
+    }
+  }
+}

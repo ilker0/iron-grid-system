@@ -1,0 +1,66 @@
+@for $i from 1 through $grid-columns {
+  .i-col-#{$i} {
+    box-sizing: border-box;
+    width: ((100% / $grid-columns) * $i);
+  }
+
+  .i-col-offset-#{$i} {
+    margin-left: ((100% / $grid-columns) * $i);
+  }
+
+  .i-col-order-#{$i} {
+    order: $i;
+  }
+
+  @each $gutter in $grid-gutter {
+    .i-row-vgutter-#{$gutter} {
+      .i-col-#{$i} {
+        padding-top: #{$gutter}px;
+        padding-bottom: #{$gutter}px;
+      }
+    }
+
+    .i-row-hgutter-#{$gutter} {
+      .i-col-#{$i} {
+        padding-right: #{$gutter}px;
+        padding-left: #{$gutter}px;
+      }
+    }
+  }
+}
+
+@each $breakpoint-key in map-keys($breakpoints) {
+  $breakpoint: map-get($breakpoints, $breakpoint-key);
+
+  @media only screen and #{$breakpoint} {
+    @for $i from 1 through $grid-columns {
+      .i-col-#{$breakpoint-key}-#{$i} {
+        width: ((100% / $grid-columns) * $i);
+      }
+
+      .i-col-offset-#{$breakpoint-key}-#{$i} {
+        margin-left: ((100% / $grid-columns) * $i);
+      }
+
+      .i-col-order-#{$breakpoint-key}-#{$i} {
+        order: $i;
+      }
+
+      @each $gutter in $grid-gutter {
+        .i-row-vgutter-#{$breakpoint-key}-#{$gutter} {
+          .i-col-#{$breakpoint-key}-#{$i} {
+            padding-top: #{$gutter}px;
+            padding-bottom: #{$gutter}px;
+          }
+        }
+
+        .i-row-hgutter-#{$breakpoint-key}-#{$gutter} {
+          .i-col-#{$breakpoint-key}-#{$i} {
+            padding-right: #{$gutter}px;
+            padding-left: #{$gutter}px;
+          }
+        }
+      }
+    }
+  }
+}
