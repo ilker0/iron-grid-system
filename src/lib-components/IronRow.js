@@ -10,13 +10,13 @@ export default {
   name: IRON_ROW,
 
   render() {
-    const { justify, align, vGutter, hGutter, $slots } = this;
+    const { justify, tag, align, vGutter, hGutter, $slots } = this;
 
     const vGutterClasses = ClassMatch('i-row-vgutter', vGutter);
     const hGutterClasses = ClassMatch('i-row-hgutter', hGutter);
 
     return h(
-      'div',
+      tag,
       {
         class: {
           'i-row': true,
@@ -31,28 +31,34 @@ export default {
   },
 
   props: {
+    tag: {
+      type: String,
+      default: () => 'div',
+      validate: val => ArrayValidator(val, 'TAGS'),
+    },
+
     justify: {
       type: String,
       default: () => 'start',
-      validate: (val) => ArrayValidator(val, 'FLEX'),
+      validate: val => ArrayValidator(val, 'FLEX'),
     },
 
     align: {
       type: String,
       default: () => 'start',
-      validate: (val) => ArrayValidator(val, 'FLEX'),
+      validate: val => ArrayValidator(val, 'FLEX'),
     },
 
     hGutter: {
       type: [Number, Object],
-      validate: (val) => {
+      validate: val => {
         ObjectOrNumberValidator(val, 'BREAKPOINTS');
       },
     },
 
     vGutter: {
       type: [Number, Object],
-      validate: (val) => {
+      validate: val => {
         ObjectOrNumberValidator(val, 'BREAKPOINTS');
       },
     },

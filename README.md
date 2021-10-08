@@ -1,6 +1,6 @@
 # Iron Grid System
 
-A responsive grid system for Vue 2.x & 3.x.
+A responsive grid system for 3.x.
 
 ## 📦 Installation
 
@@ -15,19 +15,6 @@ yarn install iron-grid-system
 ```
 
 ## 🔨 Usage
-
-#### For Vue 2.x
-
-```
-import Vue from "vue";
-import App from "./App.vue";
-import 'iron-grid-system/dist/style.css';
-
-new Vue({
-  render: h => h(App)
-}).$mount("#app");
-
-```
 
 #### For Vue 3.x
 
@@ -130,27 +117,30 @@ $breakpoints: (
 
 Container properties
 
-| Property | Description                                                     | Type                                           | Default |
-| -------- | --------------------------------------------------------------- | ---------------------------------------------- | ------- |
-| tag      | Container's html tag element.                                   | div, section, aside, nav, header, main, footer | div     |
-| fluid    | Full width container, spanning the entire width of the viewport | Boolean                                        | false   |
+| Property | Description                                                      | Type                                           | Default |
+| -------- | ---------------------------------------------------------------- | ---------------------------------------------- | ------- |
+| tag      | Container's html tag element.                                    | div, section, aside, nav, header, main, footer | div     |
+| fluid    | Full width container, spanning the entire width of the viewport. | Boolean                                        | false   |
 
 ### Row
 
 Row properties
 
-| Property | Description                                                     | Type                                           | Default |
-| -------- | --------------------------------------------------------------- | ---------------------------------------------- | ------- |
-| justify  | Container's html tag element.                                   | div, section, aside, nav, header, main, footer | div     |
-| align    | Full width container, spanning the entire width of the viewport | Boolean                                        | false   |
-| hGutter  | Full width container, spanning the entire width of the viewport | Boolean                                        | false   |
-| vGutter  | Full width container, spanning the entire width of the viewport | Boolean                                        | false   |
+| Property | Description                       | Type                                           | Default |
+| -------- | --------------------------------- | ---------------------------------------------- | ------- |
+| tag      | Row html tag element.             | div, section, aside, nav, header, main, footer | div     |
+| justify  | Horizontal arrangement.           | start, end, center, between, around            | start   |
+| align    | Vertical alignment.               | start, end, center, between, around            | start   |
+| hGutter  | Spacing horizontal between column | Number, Object({sm: 4, md: 8, lg: 16, xl: 24}) | 0       |
+| vGutter  | Spacing vertical between column   | Number, Object({sm: 4, md: 8, lg: 16, xl: 24}) | 0       |
 
 ### Col
 
 Col properties
 
-| Property | Description                                                     | Type                                           | Default |
-| -------- | --------------------------------------------------------------- | ---------------------------------------------- | ------- |
-| tag      | Container's html tag element.                                   | div, section, aside, nav, header, main, footer | div     |
-| fluid    | Full width container, spanning the entire width of the viewport | Boolean                                        | false   |
+| Property | Description                                     | Type                                           | Default |
+| -------- | ----------------------------------------------- | ---------------------------------------------- | ------- |
+| tag      | Col html tag element.                           | div, section, aside, nav, header, main, footer | div     |
+| cols     | Col width.                                      | Number, Object({sm: 12, md: 6, lg: 4 , xl: 3}) | 0       |
+| offset   | Number of cells to shift the cell from the left | Number, Object({sm: 12, md: 6, lg: 4 , xl: 3}) | 0       |
+| order    | Raster order                                    | Number, Object({sm: 3, md: 4, lg: 2 , xl: 1})  | 0       |
