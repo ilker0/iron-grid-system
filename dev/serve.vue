@@ -1,11 +1,13 @@
 <script>
 import { defineComponent } from 'vue';
-import { Container } from '@/lib-components';
+import { Container, Row, Col } from 'iron-grid-system';
 
 export default defineComponent({
   name: 'ServeDev',
   components: {
     Container,
+    Row,
+    Col,
   },
 });
 </script>
