@@ -14,7 +14,7 @@ or
 yarn install iron-grid-system
 ```
 
-# ⏩ Quick Start
+## ⏩ Quick Start
 
 [![Edit VueWait Sandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/competent-cerf-wd3h4?file=/src/App.vue)
 
