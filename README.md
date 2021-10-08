@@ -1,6 +1,6 @@
 # Iron Grid System
 
-A responsive grid system for 3.x.
+A responsive grid system for Vue 3.x.
 
 ## 📦 Installation
 
